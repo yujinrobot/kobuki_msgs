@@ -1,0 +1,11 @@
+<stack>
+  <description brief="kobuki message and service types">
+    <p>
+      Custom messages and services for the Kobuki packages.
+    </p> 
+  </description>
+  <author>Daniel Stonier, 주영훈</author>
+  <license>BSD</license>  
+  <review status="experimental" notes=""/>
+  <url>http://ros.org/wiki/kobuki_msgs</url>
+</stack>
