@@ -11,6 +11,7 @@
   <export>
     <cpp cflags="-I${prefix}/msg_gen/cpp/include -I${prefix}/srv_gen/cpp/include"/>
   </export>
+  <depend package="std_msgs"/>
 </package>
 
 
