@@ -1,7 +1,7 @@
 <package>
-  <description brief="kobuki message and service types">
+  <description brief="Kobuki message and service types">
     <p>
-      Custom messages and services for the Kobuki packages.
+      Custom messages and services for Kobuki packages.
     </p> 
   </description>
   <author>Daniel Stonier, 주영훈</author>
