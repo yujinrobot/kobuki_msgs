@@ -1,3 +1,6 @@
+# Docking base ir sensors messages.
+# Generated on the proximity of the docking base to assist the automatic docking.
+
 uint8 NEAR_LEFT   =  1
 uint8 NEAR_CENTER =  2
 uint8 NEAR_RIGHT  =  4
