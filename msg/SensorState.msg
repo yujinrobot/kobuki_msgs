@@ -1,4 +1,8 @@
 # Kobuki Sensor Data Messages
+# 
+# For more direct simple interactions (buttons, leds, gyro, motor velocity 
+# etc) use the other topics. This provides detailed information about the 
+# entire state package that is transmitted at 50Hz from the robot. 
 #
 
 # Buttons bitmasks to decode byte "buttons"
