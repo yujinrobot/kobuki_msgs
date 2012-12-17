@@ -8,6 +8,9 @@
   <license>BSD</license>
   <review status="experimental" notes=""/>
   <url>http://www.ros.org/wiki/kobuki_msgs</url>
+
+  <depend package="actionlib_msgs"/>
+
   <export>
     <cpp cflags="-I${prefix}/msg_gen/cpp/include -I${prefix}/srv_gen/cpp/include"/>
   </export>

@@ -1,5 +1,5 @@
-# Provides a button event
-# This message is generated whenever a button is pressed or released
+# Provides a bumper event
+# This message is generated whenever a bumper is pressed or released
 
 # state
 uint8 RELEASED = 0
