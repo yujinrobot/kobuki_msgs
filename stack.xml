@@ -8,6 +8,6 @@
   <license>BSD</license>  
   <review status="experimental" notes=""/>
   <url>http://ros.org/wiki/kobuki_msgs</url>
-  <depend stack="message_generation"/>
-  <depend stack="std_msgs"/>
+  <depend stack="ros" />
+  <depend stack="ros_comm" />
 </stack>
