@@ -9,4 +9,5 @@
   <review status="experimental" notes=""/>
   <url>http://ros.org/wiki/kobuki_msgs</url>
   <depend stack="message_generation"/>
+  <depend stack="std_msgs"/>
 </stack>
