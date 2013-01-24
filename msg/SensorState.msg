@@ -1,8 +1,8 @@
 # Kobuki Sensor Data Messages
-# 
-# For more direct simple interactions (buttons, leds, gyro, motor velocity 
-# etc) use the other topics. This provides detailed information about the 
-# entire state package that is transmitted at 50Hz from the robot. 
+#
+# For more direct simple interactions (buttons, leds, gyro, motor velocity
+# etc) use the other topics. This provides detailed information about the
+# entire state package that is transmitted at 50Hz from the robot.
 #
 
 
@@ -26,7 +26,7 @@ uint8 BUTTON0 = 1
 uint8 BUTTON1 = 2
 uint8 BUTTON2 = 4
 
-# Charger state is a combination of charging device (adapter, docking station) 
+# Charger state is a combination of charging device (adapter, docking station)
 # and state (charging, charged, discharging):
 uint8 DISCHARGING      = 0
 uint8 DOCKING_CHARGED  = 2
@@ -57,10 +57,10 @@ Header header
 ###################
 uint16 time_stamp      # milliseconds starting when turning on Kobuki (max. 65536, then starts from 0 again)
 uint8  bumper          # see bumper states
-uint8  wheel_drop      # see wheel drop sensor states 
-uint8  cliff           # see cliff sensor states 
-uint16 left_encoder    # accumulated ticks left wheel starting with turning on Kobuki (max. 65536)
-uint16 right_encoder   # accumulated ticks right wheel starting with turning on Kobuki (max. 65536)
+uint8  wheel_drop      # see wheel drop sensor states
+uint8  cliff           # see cliff sensor states
+uint16 left_encoder    # accumulated ticks left wheel starting with turning on Kobuki (max. 65535)
+uint16 right_encoder   # accumulated ticks right wheel starting with turning on Kobuki (max. 65535)
 int8   left_pwm        # % of applied maximum voltage left wheel: -100 (max. voltage backward) to +100 (max. voltage forward)
 int8   right_pwm       # % of applied maximum voltage right wheel: -100 (max. voltage backward) to +100 (max. voltage forward)
 uint8  buttons         # see button states
@@ -70,7 +70,7 @@ uint8  battery         # battery voltage in 0.1V (ex. 16.1V -> 161)
 ###################
 # Cliff Packet
 ###################
-uint16[] bottom        # ADC output of the right, centre, left cliff PSD sensor (0 - 4096, distance measure is non-linear)
+uint16[] bottom        # ADC output of the right, centre, left cliff PSD sensor (0 - 4095, distance measure is non-linear)
 
 ###################
 # Current Packet
@@ -82,4 +82,4 @@ uint8   over_current   # see over current states
 # Input Packet
 ###################
 uint16   digital_input # see digital input states; will show garbage when nothing is connected
-uint16[] analog_input  # ADC values for the 4 analog inputs; 0 - 4096: 0.0 - 3.3V; will show garbage when nothing is connected
+uint16[] analog_input  # ADC values for the 4 analog inputs; 0 - 4095: 0.0 - 3.3V; will show garbage when nothing is connected
