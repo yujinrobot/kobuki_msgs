@@ -3,3 +3,4 @@ build
 lib
 msg_gen
 src/kobuki_msgs
+msg/AutoDocking*.msg
