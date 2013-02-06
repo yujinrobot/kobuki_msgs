@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(kobuki_msgs)
-find_package(catkin REQUIRED COMPONENTS genmsg std_msgs actionlib_msgs)
+find_package(catkin REQUIRED COMPONENTS std_msgs actionlib_msgs message_generation)
 
 add_message_files(DIRECTORY msg
                       FILES BumperEvent.msg

@@ -6,9 +6,9 @@
       Kobuki message and service types: custom messages and services for Kobuki packages.
     </p> 
   </description>
-  <author email="stonier@rnd.yujinrobot.com">Daniel Stonier</author>
-  <author email="younghoon.ju@rnd.yujinrobot.com">Younghoon Ju</author>
-  <maintainer email="stonier@rnd.yujinrobot.com">Daniel Stonier</maintainer>
+  <author email="stonier@yujinrobot.com">Daniel Stonier</author>
+  <author email="younghoon.ju@yujinrobot.com">Younghun Ju</author>
+  <maintainer email="stonier@yujinrobot.com">Daniel Stonier</maintainer>
   <license>BSD</license>
   <url>http://www.ros.org/wiki/kobuki_msgs</url>
 
@@ -16,7 +16,9 @@
 
   <build_depend>std_msgs</build_depend>
   <build_depend>actionlib_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
 
   <run_depend>std_msgs</run_depend>
   <run_depend>actionlib_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
 </package>
