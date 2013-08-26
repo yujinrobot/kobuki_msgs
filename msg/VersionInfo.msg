@@ -1,8 +1,8 @@
 # Contains unique device id, version info and available features for the kobuki platform.
 # Useful for compatibility checking and introspection
 
-string hardware   # <mayor>.<minor>.<patch>
-string firmware   # <mayor>.<minor>.<patch>
+string hardware   # <major>.<minor>.<patch>
+string firmware   # <major>.<minor>.<patch>
 string software   # Still to decide how it will look
 uint32[] udid
 
