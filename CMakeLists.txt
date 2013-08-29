@@ -10,7 +10,8 @@ add_message_files(DIRECTORY msg
                             Led.msg
                             PowerSystemEvent.msg
                             SensorState.msg
-                            VersionInfo.msg        
+                            VersionInfo.msg
+                            ControllerInfo.msg
                             ButtonEvent.msg
                             DigitalInputEvent.msg
                             DockInfraRed.msg
