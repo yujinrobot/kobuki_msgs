@@ -5,6 +5,9 @@ Changelog
 Hydro, bugfixing
 ================
 
+Forthcoming
+-----------
+
 0.5.0 (2013-08-29)
 ------------------
 * Add new message ControllerInfo for custom PID gain setting of kobuki's wheel controller.
