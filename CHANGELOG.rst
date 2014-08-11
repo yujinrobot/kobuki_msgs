@@ -7,6 +7,9 @@ Hydro, bugfixing
 
 Forthcoming
 -----------
+* Merge pull request `#6 <https://github.com/yujinrobot/kobuki_msgs/issues/6>`_ from yujinrobot/msg_moveout
+* migrate from kobuki_testsuite
+* Contributors: Daniel Stonier, Jihoon Lee
 
 0.5.0 (2013-08-29)
 ------------------
