@@ -19,6 +19,7 @@ add_message_files(DIRECTORY msg
                             MotorPower.msg
                             RobotStateEvent.msg
                             Sound.msg
+                            ScanAngle.msg
                             WheelDropEvent.msg
                  )
 
