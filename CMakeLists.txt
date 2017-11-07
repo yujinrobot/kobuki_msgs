@@ -1,32 +1,35 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(kobuki_msgs)
-find_package(catkin REQUIRED COMPONENTS std_msgs actionlib_msgs message_generation)
 
-add_message_files(DIRECTORY msg
-                      FILES BumperEvent.msg
-                            CliffEvent.msg
-                            DigitalOutput.msg
-                            ExternalPower.msg
-                            Led.msg
-                            PowerSystemEvent.msg
-                            SensorState.msg
-                            VersionInfo.msg
-                            ControllerInfo.msg
-                            ButtonEvent.msg
-                            DigitalInputEvent.msg
-                            DockInfraRed.msg
-                            KeyboardInput.msg
-                            MotorPower.msg
-                            RobotStateEvent.msg
-                            Sound.msg
-                            ScanAngle.msg
-                            WheelDropEvent.msg
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+                            msg/BumperEvent.msg
+                            msg/CliffEvent.msg
+                            #msg/DigitalOutput.msg
+                            #msg/ExternalPower.msg
+                            msg/Led.msg
+                            msg/PowerSystemEvent.msg
+                            #msg/SensorState.msg
+                            #msg/VersionInfo.msg
+                            #msg/ControllerInfo.msg
+                            msg/ButtonEvent.msg
+                            msg/DigitalInputEvent.msg
+                            #msg/DockInfraRed.msg
+                            #msg/KeyboardInput.msg
+                            #msg/MotorPower.msg
+                            msg/RobotStateEvent.msg
+                            #msg/Sound.msg
+                            #msg/ScanAngle.msg
+                            msg/WheelDropEvent.msg
                  )
 
-add_action_files(DIRECTORY action
-                     FILES AutoDocking.action
-                )
+#add_action_files(DIRECTORY action
+#                     FILES AutoDocking.action
+#                )
 
-generate_messages(DEPENDENCIES std_msgs actionlib_msgs)
+ament_export_dependencies(rosidl_default_runtime)
 
-catkin_package(CATKIN_DEPENDS message_runtime std_msgs actionlib_msgs)
+ament_package()
