@@ -7,7 +7,7 @@ Hydro, bugfixing
 
 Forthcoming
 -----------
-* Ros2 eloquent upgrade,
+* Ros2 eloquent upgrade, `#11 <https://github.com/yujinrobot/kobuki_msgs/issues/11>`_ 
 
 0.6.1 (2014-08-11)
 ------------------
