@@ -2,12 +2,19 @@
 Changelog
 ^^^^^^^^^
 
-Hydro, bugfixing
-================
-
 Forthcoming
 -----------
+* ...
+
+Eloquent
+========
+
+0.8.0 (2020-01-09)
+------------------
 * Ros2 eloquent upgrade, `#11 <https://github.com/yujinrobot/kobuki_msgs/issues/11>`_ 
+
+Hydro, bugfixing
+================
 
 0.6.1 (2014-08-11)
 ------------------
