@@ -1,32 +1,69 @@
-cmake_minimum_required(VERSION 2.8.3)
+##############################################################################
+# CMake
+##############################################################################
+
+cmake_minimum_required(VERSION 3.5)
 project(kobuki_msgs)
-find_package(catkin REQUIRED COMPONENTS std_msgs actionlib_msgs message_generation)
 
-add_message_files(DIRECTORY msg
-                      FILES BumperEvent.msg
-                            CliffEvent.msg
-                            DigitalOutput.msg
-                            ExternalPower.msg
-                            Led.msg
-                            PowerSystemEvent.msg
-                            SensorState.msg
-                            VersionInfo.msg
-                            ControllerInfo.msg
-                            ButtonEvent.msg
-                            DigitalInputEvent.msg
-                            DockInfraRed.msg
-                            KeyboardInput.msg
-                            MotorPower.msg
-                            RobotStateEvent.msg
-                            Sound.msg
-                            ScanAngle.msg
-                            WheelDropEvent.msg
-                 )
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
 
-add_action_files(DIRECTORY action
-                     FILES AutoDocking.action
-                )
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 
-generate_messages(DEPENDENCIES std_msgs actionlib_msgs)
+##############################################################################
+# Dependencies
+##############################################################################
 
-catkin_package(CATKIN_DEPENDS message_runtime std_msgs actionlib_msgs)
+find_package(action_msgs REQUIRED)
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+
+##############################################################################
+# Messages
+##############################################################################
+
+set(msg_files
+    "msg/BumperEvent.msg"
+    "msg/CliffEvent.msg"
+    "msg/DigitalOutput.msg"
+    "msg/ExternalPower.msg"
+    "msg/Led.msg"
+    "msg/PowerSystemEvent.msg"
+    "msg/SensorState.msg"
+    "msg/VersionInfo.msg"
+    "msg/ControllerInfo.msg"
+    "msg/ButtonEvent.msg"
+    "msg/DigitalInputEvent.msg"
+    "msg/DockInfraRed.msg"
+    "msg/KeyboardInput.msg"
+    "msg/MotorPower.msg"
+    "msg/RobotStateEvent.msg"
+    "msg/Sound.msg"
+    "msg/ScanAngle.msg"
+    "msg/WheelDropEvent.msg"
+)   
+
+set(action_files
+    "action/AutoDocking.action"
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
+  ${action_files}
+  DEPENDENCIES
+    action_msgs  # even though not directly using, it requires some trace back
+    std_msgs
+  # ADD_LINTER_TESTS  # very expensive
+)
+##############################################################################
+# Package
+##############################################################################
+
+ament_export_dependencies(rosidl_default_runtime)
+
+ament_package()

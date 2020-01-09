@@ -7,6 +7,10 @@ Hydro, bugfixing
 
 Forthcoming
 -----------
+* Ros2 eloquent upgrade, `#11 <https://github.com/yujinrobot/kobuki_msgs/issues/11>`_ 
+
+0.6.1 (2014-08-11)
+------------------
 * Merge pull request `#6 <https://github.com/yujinrobot/kobuki_msgs/issues/6>`_ from yujinrobot/msg_moveout
 * migrate from kobuki_testsuite
 * Contributors: Daniel Stonier, Jihoon Lee
